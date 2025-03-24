@@ -1,0 +1,85 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    background-color: #ef4444;
+}
+
+.container {
+    background: white;
+    width: 70%; /* Increased width */
+    margin: 60px auto;
+    padding: 40px; /* Increased padding */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    border-radius: 12px;
+}
+
+h1 {
+    font-size: 40px; /* Bigger main heading */
+    color: #2d5986;
+    font-weight: bold;
+}
+
+h2 {
+    font-size: 32px; /* Bigger question text */
+}
+
+p {
+    font-size: 24px; /* Bigger general text */
+}
+
+button {
+    padding: 20px 30px; /* Bigger button padding */
+    margin: 15px;
+    cursor: pointer;
+    border: none;
+    font-size: 22px; /* Bigger button text */
+    border-radius: 10px;
+}
+
+.start-btn { background-color: #4CAF50; color: white; }
+.save-btn { background-color: #2196F3; color: white; }
+.next-btn { background-color: #FF9800; color: white; }
+.submit-btn { background-color: #f44336; color: white; }
+.restart-btn { background-color: #66b3ff; color: white; }
+
+input {
+    font-size: 22px; /* Bigger input text */
+    padding: 12px;
+    width: 100px; /* Wider input boxes */
+    text-align: center;
+    border-radius: 6px;
+}
+
+#options button {
+    display: block;
+    width: 90%; /* Make answer buttons larger */
+    text-align: left;
+    padding: 18px; /* Bigger padding */
+    margin: 12px auto;
+    background: #eaf2f8;
+    border: 3px solid #bbb;
+    font-size: 26px; /* Bigger option button text */
+    color: #34495e
+    border-radius: 8px;
+}
+
+.selected {
+    font-weight: bold;
+    color: #f9e79f;
+    background-color: #3498db !important; 
+}
+
+#timer {
+    font-size: 26px; /* Bigger timer */
+    color: #e74c3c;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+#feedback {
+    font-size: 30px; /* Bigger feedback text */
+    font-weight: bold;
+    margin-top: 20px;
+}​

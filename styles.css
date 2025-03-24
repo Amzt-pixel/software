@@ -78,28 +78,22 @@ input {
     font-weight: bold;
     margin-top: 20px;
 }
-/* ======================
-   Results Color Styling
-   ====================== */
-#result-container p {
-  margin: 10px 0;
-  /*font-size: 1.1em;*/
+#score {
+    color: green; /* Correct answers in green */
+    font-weight: bold;
 }
 
-.correct {
-  color: #2ecc71; /* Green */
-  font-weight: bold;
+#wrong {
+    color: red; /* Wrong answers in red */
+    font-weight: bold;
 }
 
-.wrong {
-  color: #e74c3c; /* Red */
-  font-weight: bold;
+#unattempted {
+    color: orange; /* Unattempted questions in orange */
+    font-weight: bold;
 }
 
-.unattempted {
-  color: #f39c12; /* Orange */
-}
-
-.time {
-  color: #3498db; /* Blue */
+#timeTaken {
+    color: navy; /* Time taken in navy */
+    font-weight: bold;
 }

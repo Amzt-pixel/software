@@ -3,7 +3,7 @@ body {
     text-align: center;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: #ef4444;
 }
 
 .container {
@@ -16,11 +16,12 @@ body {
 }
 
 h1 {
-    font-size: 36px; /* Bigger main heading */
+    font-size: 40px; /* Bigger main heading */
+    font-weight: bold;
 }
 
 h2 {
-    font-size: 30px; /* Bigger question text */
+    font-size: 32px; /* Bigger question text */
 }
 
 p {
@@ -40,12 +41,12 @@ button {
 .save-btn { background-color: #2196F3; color: white; }
 .next-btn { background-color: #FF9800; color: white; }
 .submit-btn { background-color: #f44336; color: white; }
-.restart-btn { background-color: #795548; color: white; }
+.restart-btn { background-color: #66b3ff; color: white; }
 
 input {
     font-size: 22px; /* Bigger input text */
     padding: 12px;
-    width: 120px; /* Wider input boxes */
+    width: 100px; /* Wider input boxes */
     text-align: center;
     border-radius: 6px;
 }
@@ -56,7 +57,7 @@ input {
     text-align: left;
     padding: 18px; /* Bigger padding */
     margin: 12px auto;
-    background: #ddd;
+    background: #eaf2f8;
     border: 3px solid #bbb;
     font-size: 26px; /* Bigger option button text */
     border-radius: 8px;
@@ -64,17 +65,18 @@ input {
 
 .selected {
     font-weight: bold;
-    background-color: #b3e0ff !important;
+    background-color: #3498db !important;
 }
 
 #timer {
-    font-size: 28px; /* Bigger timer */
+    font-size: 26px; /* Bigger timer */
+    color: #e74c3c;
     font-weight: bold;
     margin-bottom: 20px;
 }
 
 #feedback {
-    font-size: 26px; /* Bigger feedback text */
+    font-size: 30px; /* Bigger feedback text */
     font-weight: bold;
     margin-top: 20px;
 }

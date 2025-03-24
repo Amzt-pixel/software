@@ -14,14 +14,15 @@ const alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLM"; // Custom looping sy
 function startTest() {
     let numQuestions = parseInt(document.getElementById("numQuestions").value);
     let maxInt = parseInt(document.getElementById("maxInt").value);
-    let setMinutes = parseInt(document.getElementById("setTimer").value);
+    let setMinutes = parseInt(document.getElementById("setMinutes").value);
+    let setSeconds = parseInt(document.getElementById("setSeconds").value);
 
-    if (numQuestions < 1 || maxInt < 1 || maxInt >= 14 || setMinutes < 1) {
+    if (numQuestions < 1 || maxInt < 1 || maxInt >= 14 || setMinutes < 1 || setMinutes > 30 || setSeconds > 59 || setSeconds < 0) {
         alert("Enter valid values!");
         return;
     }
 
-    timeLeft = setMinutes * 60;
+    timeLeft = setMinutes * 60 + setSeconds;
     startTime = new Date(); // Start hidden clock
     generateQuestions(numQuestions, maxInt);
 

@@ -82,4 +82,23 @@ input {
     font-size: 30px; /* Bigger feedback text */
     font-weight: bold;
     margin-top: 20px;
-}​
+}
+#score {
+    color: green; /* Correct answers in green */
+    font-weight: bold;
+}
+
+#wrong {
+    color: red; /* Wrong answers in red */
+    font-weight: bold;
+}
+
+#unattempted {
+    color: orange; /* Unattempted questions in orange */
+    font-weight: bold;
+}
+
+#timeTaken {
+    color: navy; /* Time taken in navy */
+    font-weight: bold;
+}

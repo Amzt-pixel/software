@@ -167,4 +167,8 @@ resultContainer.innerHTML = `
   <p class="unattempted">Unattempted: ${questions.length - userAnswers.length}</p>
   <p class="time">Time Taken: ${String(minutes).padStart(2, "0")}:${String(seconds).padStart(2, "0")}</p>
 `;
+    document.getElementById("score").innerHTML = `<span class="correct">Correct: ${correctAnswers}</span>`;
+document.getElementById("wrong").innerHTML = `<span class="wrong">Wrong: ${wrongAnswers}</span>`;
+document.getElementById("unattempted").innerHTML = `<span class="unattempted">Unattempted: ${questions.length - attempted}</span>`;
+document.getElementById("timeTaken").innerHTML = `<span class="time">Time Taken: ${minutesTaken}m ${secondsTaken}s</span>`;
 }

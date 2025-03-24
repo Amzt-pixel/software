@@ -160,7 +160,7 @@ function submitTest() {
     let minutesTaken = Math.floor(totalTime / 60);
     let secondsTaken = totalTime % 60;
 
-    document.getElementById("score").innerText = `<span style="color: #2ecc71;">Correct: ${correctAnswers}</span>`;
+    document.getElementById("score").innerText = <span style="color: #2ecc71;">'Correct: ${correctAnswers}'</span>;
     document.getElementById("wrong").innerText = `<span style="color: #e74c3c;">Wrong: ${wrongAnswers}</span>`;
     document.getElementById("unattempted").innerText = `<span style="color: #2ecc71;">Unattempted: ${questions.length - attempted}</span>`;
     document.getElementById("timeTaken").innerText = `<span style="color: #3498db;">Time Taken: ${minutesTaken}m ${secondsTaken}s</span>`;

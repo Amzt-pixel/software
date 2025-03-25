@@ -19,15 +19,15 @@ function startTest() {
 
     // Ensure Number of Questions & Maximum Subtraction Integer are entered
     if (numQuestions === "" || maxInt === "") {
-        alert("Enter both the number of questions and maximum subtraction integer!");
+        alert("Enter both the number of questions and maximum number!");
         return;
     }
 
     numQuestions = parseInt(numQuestions);
     maxInt = parseInt(maxInt);
 
-    if (isNaN(numQuestions) || numQuestions < 1 || isNaN(maxInt) || maxInt < 1 || maxInt > 20) {
-        alert("Enter valid values for number of questions and max subtraction limit!");
+    if (isNaN(numQuestions) || numQuestions < 1 || isNaN(maxInt) || maxInt < 1 || maxInt > 13) {
+        alert("Enter valid values for number of questions and max number limit!");
         return;
     }
 

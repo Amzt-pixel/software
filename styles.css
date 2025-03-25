@@ -51,6 +51,7 @@ button {
 .next-btn { background-color: #FF9800; color: white; }
 .submit-btn { background-color: #f44336; color: white; }
 .restart-btn { background-color: #66b3ff; color: white; }
+.home-btn { background-color: #000000; color: white; }
 
 input {
     font-size: 22px; /* Bigger input text */

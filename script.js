@@ -123,6 +123,7 @@ function loadQuestion() {
     });
 
     selectedAnswer = null;
+    document.getElementById("nextButton").disabled = true; // Prevent skipping question
 }
 
 

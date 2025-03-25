@@ -62,9 +62,10 @@ input {
     text-align: left;
     padding: 18px; /* Bigger padding */
     margin: 20px auto;
-    background: #eaf2f8;
-    border: 3px solid #bbb;
+    background: #00e600;
+    border: 3px solid #ffcc00;
     font-size: 26px; /* Bigger option button text */
+    color: #006699;
     border-radius: 8px;
 }
 

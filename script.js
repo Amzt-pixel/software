@@ -197,6 +197,31 @@ function nextQuestion() {
         submitTest();
     }
 }
+function saveAnswer() {
+    if (selectedAnswer === null) return;
+
+    attempted++;
+    let correctAnswer = questions[currentQuestion].answer;
+    let feedback = document.getElementById("feedback");
+
+    if (selectedAnswer === correctAnswer || (Array.isArray(correctAnswer) && correctAnswer.includes(selectedAnswer))) {
+        correctAnswers++;
+        feedback.innerText = "Very Good! Your answer is correct!";
+        feedback.style.color = "green";
+    } else {
+        wrongAnswers++;
+        feedback.innerText = `Oops! That was wrong! Correct answer: ${correctAnswer}`;
+        feedback.style.color = "red";
+    }
+
+    document.querySelectorAll("#options button").forEach(btn => {
+        btn.onclick = null; // Disable answer changes
+    });
+
+    document.getElementById("nextButton").disabled = false; // Enable 'Next' after saving
+
+    if (attempted === questions.length) submitTest(); // Auto-submit if all answered
+}
 
 function submitTest() {
     document.getElementById("test").style.display = "none";

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MCQ Test</title>
+    <link rel="stylesheet" href="ui.css">
+</head>
+<body>
+    <div class="container" id="setup">
+        <h1>MCQ Test Setup</h1>
+        <label>Number of Questions:</label>
+        <input type="text" id="numQuestions"><br>
+        
+        <label>Max Subtraction Integer:</label>
+        <input type="text" id="maxInt"><br>
+        
+        <label>Minutes:</label>
+        <input type="text" id="setMinutes">
+        
+        <label>Seconds:</label>
+        <input type="text" id="setSeconds"><br>
+        
+        <button class="home-btn" onclick="location.reload()">Home</button>
+        <button class="start-btn" onclick="startTest()">Start</button>
+    </div>
+
+    <div class="container" id="test" style="display:none;">
+        <div id="timer"></div>
+        
+        <div class="question-box">
+            <div class="question-header">
+                <span id="questionNumber"></span>
+                <span class="test-title">MCQ Test</span>
+            </div>
+            <h2 id="question"></h2>
+            <div id="options"></div>
+        </div>
+
+        <div class="buttons-container">
+            <button class="save-btn" onclick="saveAnswer()">Save</button>
+            <button class="next-btn" id="nextButton" onclick="nextQuestion()" disabled>Next</button>
+            <button class="submit-btn" onclick="submitTest()">Submit</button>
+        </div>
+
+        <div id="feedback"></div>
+    </div>
+
+    <div class="container" id="result" style="display:none;">
+        <h1>Test Complete</h1>
+        <p id="score"></p>
+        <p id="wrong"></p>
+        <p id="unattempted"></p>
+        <p id="timeTaken"></p>
+        
+        <button class="home-btn" onclick="location.reload()">Home</button>
+        <button class="restart-btn" onclick="restartTest()">Restart</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

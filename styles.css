@@ -28,6 +28,10 @@ h3 {
     font-size: 26px;
     color: #ffcc00;
 }
+h4 {
+    font-size : 32px;
+    font-weight : bold;
+    color : #0086b3;
 p {
     font-size: 24px; /* Bigger general text */
 }

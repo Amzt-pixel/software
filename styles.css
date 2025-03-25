@@ -16,7 +16,8 @@ body {
 }
 
 h1 {
-    font-size: 40px; /* Bigger main heading */
+    font-size: 42px; /* Bigger main heading */
+    color: #4caf50;
     font-weight: bold;
 }
 

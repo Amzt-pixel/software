@@ -20,11 +20,12 @@ h1 {
     color: #4caf50;
     font-weight: bold;
 }
-
 h2 {
     font-size: 32px; /* Bigger question text */
 }
-
+h3 {
+    font-size: 26px;
+}
 p {
     font-size: 24px; /* Bigger general text */
 }
@@ -71,7 +72,7 @@ input {
 }
 
 #timer {
-    font-size: 26px; /* Bigger timer */
+    font-size: 24px; /* Bigger timer */
     color: #e74c3c;
     font-weight: bold;
     margin-bottom: 20px;

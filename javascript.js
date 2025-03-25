@@ -17,7 +17,7 @@ function startTest() {
     let setMinutes = parseInt(document.getElementById("setMinutes").value);
     let setSeconds = parseInt(document.getElementById("setSeconds").value);
 
-    if (numQuestions < 1 || maxInt < 1 || maxInt >= 14 || setMinutes < 1 || setMinutes > 30 || setSeconds > 59 || setSeconds < 0) {
+    if (numQuestions < 1 || maxInt < 1 || maxInt > 20 || setMinutes < 1 || setMinutes > 30 || setSeconds > 59 || setSeconds < 0) {
         alert("Enter valid values!");
         return;
     }

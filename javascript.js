@@ -58,37 +58,39 @@ function startTimer() {
 function generateQuestions(num, maxInt) {
     questions = [];
     for (let i = 0; i < num; i++) {
-        let letter1 = alphabet[Math.floor(Math.random() * 39)];
-        let letter2 = alphabet[Math.floor(Math.random() * 39)];
+        let letter1, letter2, pos1, pos2, answer1, answer2;
 
-        let pos1 = alphabet.indexOf(letter1) + 1;
-        let pos2 = alphabet.indexOf(letter2) + 1;
+        do {
+            letter1 = alphabet[Math.floor(Math.random() * 39)];
+            letter2 = alphabet[Math.floor(Math.random() * 39)];
 
-        let answer1 = pos1 - pos2;
-        let answer2 = null;
+            pos1 = alphabet.indexOf(letter1) + 1;
+            pos2 = alphabet.indexOf(letter2) + 1;
 
-        if (pos1 > 26) pos1 -= 26;
-        if (pos2 > 26) pos2 -= 26;
+            answer1 = pos1 - pos2;
 
-        let altAnswer = pos1 - pos2;
-        if (altAnswer !== answer1) {
-            answer2 = altAnswer;
+            if (pos1 > 26) pos1 -= 26;
+            if (pos2 > 26) pos2 -= 26;
+
+            let altAnswer = pos1 - pos2;
+            answer2 = altAnswer !== answer1 ? altAnswer : null;
+            
+        } while (answer1 === 0 || (answer2 !== null && answer2 === 0)); // Ensure subtraction is never 0
+
+        let finalAnswer = answer1;
+
+        if (answer2 !== null) {
+            if (Math.abs(answer2) < Math.abs(answer1)) {
+                finalAnswer = answer2;
+            } else if (Math.abs(answer2) === Math.abs(answer1)) {
+                finalAnswer = [answer1, answer2]; // Both are correct
+            }
         }
 
-        if ((Math.abs(answer1) <= maxInt) || (answer2 !== null && Math.abs(answer2) <= maxInt)) {
-            let finalAnswer = answer1;
-
-            if (answer2 !== null) {
-                if (Math.abs(answer2) < Math.abs(answer1)) {
-                    finalAnswer = answer2;
-                } else if (Math.abs(answer2) === Math.abs(answer1)) {
-                    finalAnswer = [answer1, answer2]; // Both are correct
-                }
-            }
-
+        if (Math.abs(finalAnswer) <= maxInt) {
             questions.push({ question: `${letter1} - ${letter2} = ?`, answer: finalAnswer });
         } else {
-            i--; // Ensure valid question generation
+            i--; // Ensure only valid questions are generated
         }
     }
 }

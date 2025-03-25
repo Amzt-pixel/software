@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MCQ Test</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>MCQ Test</h1>
+
+        <div id="setup">
+            <div>
+            <label for="numQuestions">Number of Questions:</label>
+            <input type="number" id="numQuestions" min="1" max="30">
+            </div>
+
+            <div>
+            <label for="maxInt">Set Max Integer (less than 20):</label>
+            <input type="number" id="maxInt" min="1" max="20">
+            </div>
+
+            <div>
+            <label for="setMinutes">Set Timer (minutes):</label>
+            <input type="number" id="setMinutes" min="1" max="30">
+            </div>
+
+            <div>
+            <label for="setSeconds">Set Timer (seconds):</label>
+            <input type="number" id="setSeconds" min="1" max="59">
+            </div>
+
+           <div><button class="start-btn" onclick="startTest()">Start Test</button> 
+           </div>
+        </div>
+
+        <div id="test" style="display:none;">
+            <div id="timer">Time Left: <span id="timeLeft"></span></div>
+            <p id="timeUpMessage"></p>
+
+            <h3 id="questionNumber"></h3>
+            <h2 id="question"></h2>
+            <div id="options"></div>
+
+            <button class="save-btn" onclick="saveAnswer()">Save</button>
+            <button class="next-btn" onclick="nextQuestion()">Next</button>
+            <button class="submit-btn" onclick="submitTest()">Submit</button>
+
+            <p id="feedback"></p>
+        </div>
+
+        <div id="result" style="display:none;">
+            <h2>Test Completed!</h2>
+            <p id="score"></p>
+            <p id="wrong"></p>
+            <p id="unattempted"></p>
+            <p id="timeTaken"></p>
+            <button class="restart-btn" onclick="location.reload()">Restart</button>
+        </div>
+    </div>
+
+    <script src="javascript.js"></script>
+</body>
+</html>

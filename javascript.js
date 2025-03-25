@@ -176,7 +176,7 @@ function saveAnswer() {
         btn.onclick = null; // Disable answer changes
     });
 
-    document.getElementById("nextButton").disabled = false; // Enable 'Next' after saving
+    document.getElementById("nextButton").disabled = true; // Enable 'Next' after saving
 
     if (attempted === questions.length) submitTest(); // Auto-submit if all answered
 }

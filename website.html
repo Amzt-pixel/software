@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MCQ Test</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Input Page -->
+    <div id="setup" class="container">
+        <h2>Test Setup</h2>
+        <label>Number of Questions *</label>
+        <input type="text" id="numQuestions" placeholder="Enter number of questions">
+
+        <label>Max Subtraction Limit *</label>
+        <input type="text" id="maxInt" placeholder="Enter max subtraction limit">
+
+        <label>Set Minutes *</label>
+        <input type="text" id="setMinutes" placeholder="Enter minutes">
+
+        <label>Set Seconds *</label>
+        <input type="text" id="setSeconds" placeholder="Enter seconds">
+
+        <div class="button-container">
+            <button onclick="goHome()">Home</button>
+            <button onclick="startTest()">Start</button>
+        </div>
+    </div>
+
+    <!-- Test Page -->
+    <div id="test" class="container" style="display: none;">
+        <div id="timer">Time Left: <span id="timeLeft"></span></div>
+
+        <div id="questionBox">
+            <p id="questionNumber"></p>
+            <p id="question"></p>
+            <div id="options"></div>
+        </div>
+
+        <p id="timeUpMessage"></p>
+
+        <div class="button-container">
+            <button id="saveButton" onclick="saveAnswer()">Save</button>
+            <button id="nextButton" onclick="nextQuestion()" disabled>Next</button>
+            <button id="submitButton" onclick="submitTest()">Submit</button>
+        </div>
+
+        <p id="feedbackMessage"></p>
+    </div>
+
+    <!-- End Results Page -->
+    <div id="result" class="container" style="display: none;">
+        <h2>Test Complete</h2>
+
+        <p id="score"></p>
+        <p id="wrong"></p>
+        <p id="unattempted"></p>
+        <p id="timeTaken"></p>
+
+        <div class="button-container">
+            <button onclick="goHome()">Home</button>
+            <button onclick="restartTest()">Restart</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
